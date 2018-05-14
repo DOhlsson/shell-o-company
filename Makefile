@@ -1,12 +1,14 @@
-  CC = gcc
+CC = gcc
 
-  CFLAGS  = -g -Wall -Wextra -Werror -O2
+CFLAGS  = -g -Wall -Wextra -Werror -O2
 
-  # the build target executable:
-  TARGET = shell
+# the build target executable:
+TARGET = shell
 
-  all: $(TARGET)
+all: $(TARGET)
 
-  $(TARGET): $(TARGET).c; $(CC) $(CFLAGS) -o $(TARGET) $(TARGET).c
+$(TARGET): $(TARGET).c 
+	$(CC) $(CFLAGS) -o $(TARGET) $(TARGET).c
 
-  clean: ; $(RM) $(TARGET)
+clean: 
+	$(RM) $(TARGET)
