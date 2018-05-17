@@ -2,6 +2,8 @@
 #include <unistd.h>
 #include <sys/wait.h>
 
+#include "dcoreutil.h"
+
 int run();
 
 int main(int argc, char* argv[]) {
@@ -19,6 +21,13 @@ int main(int argc, char* argv[]) {
 }
 
 int run(const char* input) {
+
+	int is_cmd = is_coreutil_command(input);
+	
+	if( is_cmd ) {
+		printf("Is coreutil_command\n");
+	}
+	
 	pid_t pid = fork();
 
 	if (pid > 0) {
