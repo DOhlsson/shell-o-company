@@ -20,4 +20,4 @@ $(OBJS): %.o: %.c
 
 clean: 
 	$(RM) $(TARGET)
-	$(RM) $(OBJS).o
+	$(RM) $(OBJS)
